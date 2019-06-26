@@ -1,0 +1,35 @@
+{
+  "name": "basster/twig-base64-extension",
+  "type": "library",
+  "require": {
+    "php": "^7.2",
+    "symfony/serializer": "~3.1|^4.0",
+    "twig/twig": "^2.0"
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^2.15",
+    "phpunit/phpunit": "^8.0"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ole Rößner",
+      "email": "oroessner@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Basster\\TwigBase64\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Basster\\TwigBase64\\Tests\\": "tests"
+    }
+  },
+  "minimum-stability": "stable",
+  "description": "Convert images to base64 in twig",
+  "config": {
+    "sort-packages": true
+  }
+}
