@@ -36,3 +36,14 @@ $extension = new \Basster\TwigBase64\Twig\Base64ImageExtension($converter);
 $twig = new \Twig\Environment($loader);
 $twig->addExtension($extension);
 ```
+
+Usage
+------
+
+```twig
+<img src="{{ 'img/logo.svg' | image64 }}" alt="My awesome logo" />
+```
+
+Supported Mime-Types?
+---------------------
+It utilizes Symfonys `MimeTypeGuesser`, nuff said. 
