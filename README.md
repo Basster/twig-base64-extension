@@ -1,7 +1,7 @@
 basster/twig-base64-extension
 =============================
 
-[![SymfonyInsight](https://insight.symfony.com/projects/b44a3032-735a-4659-9077-d32393efa623/mini.svg)](https://insight.symfony.com/projects/b44a3032-735a-4659-9077-d32393efa623)
+[![SymfonyInsight](https://insight.symfony.com/projects/b44a3032-735a-4659-9077-d32393efa623/mini.svg)](https://insight.symfony.com/projects/b44a3032-735a-4659-9077-d32393efa623) [![Build Status](https://travis-ci.com/Basster/twig-base64-extension.svg?branch=master)](https://travis-ci.com/Basster/twig-base64-extension)
 
 Install
 -------
