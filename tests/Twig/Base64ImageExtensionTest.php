@@ -7,6 +7,8 @@ namespace Basster\TwigBase64\Tests\Twig;
 use Basster\TwigBase64\Converter\FileConverterInterface;
 use Basster\TwigBase64\Twig\Base64ImageExtension;
 use PHPUnit\Framework\TestCase;
+use Prophecy\PhpUnit\ProphecyTrait;
+use Prophecy\Prophecy\ObjectProphecy;
 use Twig\TwigFilter;
 
 /**
@@ -16,12 +18,14 @@ use Twig\TwigFilter;
  */
 final class Base64ImageExtensionTest extends TestCase
 {
+    use ProphecyTrait;
+
     private const BASE64_AVATAR = 'data:image/gif;base64,R0lGODdhAQABAIAAAP///////ywAAAAAAQABAAACAkQBADs=';
     private const AVATAR = 'avatar.gif';
 
-    private $converter;
+    private FileConverterInterface | ObjectProphecy $converter;
 
-    private $extension;
+    private Base64ImageExtension $extension;
 
     protected function setUp(): void
     {

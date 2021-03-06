@@ -8,6 +8,8 @@ use Basster\TwigBase64\Converter\FileConverterInterface;
 use Basster\TwigBase64\Converter\ImageToBase64Converter;
 use PHPUnit\Framework\TestCase;
 use Prophecy\Argument;
+use Prophecy\PhpUnit\ProphecyTrait;
+use Prophecy\Prophecy\ObjectProphecy;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 
 /**
@@ -17,9 +19,11 @@ use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
  */
 final class ImageToBase64ConverterTest extends TestCase
 {
-    private $normalizer;
+    use ProphecyTrait;
 
-    private $converter;
+    private NormalizerInterface | ObjectProphecy $normalizer;
+
+    private ImageToBase64Converter $converter;
 
     protected function setUp(): void
     {

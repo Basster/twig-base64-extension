@@ -18,9 +18,9 @@ before_script:
     - if [ "$DEPS" == "no" ]; then composer install; fi;
 
 script: |
+    ./vendor/bin/psalm
     ./vendor/bin/phpunit
 matrix:
     include:
-        - php: 7.2
-        - php: 7.3
+        - php: 8.0
     fast_finish: true

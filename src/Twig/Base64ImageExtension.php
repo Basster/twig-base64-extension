@@ -14,16 +14,10 @@ use Twig\TwigFilter;
 final class Base64ImageExtension extends AbstractExtension
 {
     /**
-     * @var \Basster\TwigBase64\Converter\FileConverterInterface
-     */
-    private $fileConverter;
-
-    /**
      * Base64ImageExtension constructor.
      */
-    public function __construct(FileConverterInterface $fileConverter)
+    public function __construct(private FileConverterInterface $fileConverter)
     {
-        $this->fileConverter = $fileConverter;
     }
 
     public function getFilters(): array
