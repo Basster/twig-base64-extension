@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Basster\TwigBase64\Converter;
 
+use Symfony\Component\Serializer\Exception\ExceptionInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 
 /**
@@ -12,23 +13,17 @@ use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 final class ImageToBase64Converter implements FileConverterInterface
 {
     /**
-     * @var \Symfony\Component\Serializer\Normalizer\NormalizerInterface
-     */
-    private $normalizer;
-
-    /**
      * ImageToBase64Converter constructor.
      */
-    public function __construct(NormalizerInterface $normalizer)
+    public function __construct(private NormalizerInterface $normalizer)
     {
-        $this->normalizer = $normalizer;
     }
 
     /**
-     * @throws \Symfony\Component\Serializer\Exception\ExceptionInterface
+     * @throws ExceptionInterface
      */
     public function convert(string $imagePath): string
     {
-        return $this->normalizer->normalize(new \SplFileObject($imagePath));
+        return (string) $this->normalizer->normalize(new \SplFileObject($imagePath));
     }
 }
