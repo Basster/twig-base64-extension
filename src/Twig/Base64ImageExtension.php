@@ -29,6 +29,6 @@ final class Base64ImageExtension extends AbstractExtension
 
     public function createBase64Image(string $image): string
     {
-        return $this->fileConverter->convert($image);
+        return $this->fileConverter->convert($_SERVER['DOCUMENT_ROOT'] . $image);
     }
 }
