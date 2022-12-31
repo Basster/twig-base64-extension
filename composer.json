@@ -3,7 +3,7 @@
   "type": "library",
   "require": {
     "php": ">=8.0",
-    "symfony/serializer": "^4.4|^5.0|^5.0|^6.0",
+    "symfony/serializer": "^4.4|^5.4|^6.0",
     "twig/twig": "^2.0|^3.0"
   },
   "require-dev": {
